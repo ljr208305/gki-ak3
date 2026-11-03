@@ -1,0 +1,22 @@
+* text=auto
+
+# Linux / Actions 侧必须 LF
+*.sh      text eol=lf
+*.patch   text eol=lf
+*.config  text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.md      text eol=lf
+*.json    text eol=lf
+*.tsv     text eol=lf
+*.c       text eol=lf
+*.h       text eol=lf
+*.mk      text eol=lf
+Makefile  text eol=lf
+Kbuild    text eol=lf
+Kconfig   text eol=lf
+LICENSE   text eol=lf
+
+# Windows 侧
+*.cmd     text eol=crlf
+*.ps1     text eol=crlf

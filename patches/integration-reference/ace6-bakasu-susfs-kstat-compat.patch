@@ -1,0 +1,35 @@
+--- a/include/linux/susfs.h
++++ b/include/linux/susfs.h
+@@ -68,7 +68,7 @@
+ #define KSTAT_SPOOF_ATIME_TV_NSEC (1 << 5)
+ #define KSTAT_SPOOF_MTIME_TV_SEC (1 << 6)
+ #define KSTAT_SPOOF_MTIME_TV_NSEC (1 << 7)
+-#define KSTAT_SPOOF_CTIME_TV_SEC (1 < 8)
++#define KSTAT_SPOOF_CTIME_TV_SEC (1 << 8)
+ #define KSTAT_SPOOF_CTIME_TV_NSEC (1 << 9)
+ #define KSTAT_SPOOF_BLOCKS (1 << 10)
+ #define KSTAT_SPOOF_BLKSIZE (1 << 11)
+--- a/fs/susfs.c
++++ b/fs/susfs.c
+@@ -326,6 +326,10 @@
+ 		info.err = -EFAULT;
+ 		goto out_copy_to_user;
+ 	}
++
++	/* BakaSU's repr(C) request uses a one-byte bool followed by padding.
++	 * Legacy tools send int 0/1. Keep all offsets and accept both on arm64 LE. */
++	info.is_statically = !!((unsigned int)info.is_statically & 0xff);
+ 
+ 	if (*info.target_pathname == '\0') {
+ 		info.err = -EINVAL;
+@@ -441,6 +445,10 @@
+ 		info.err = -EFAULT;
+ 		goto out_copy_to_user;
+ 	}
++
++	/* BakaSU's repr(C) request uses a one-byte bool followed by padding.
++	 * Legacy tools send int 0/1. Keep all offsets and accept both on arm64 LE. */
++	info.is_statically = !!((unsigned int)info.is_statically & 0xff);
+ 
+ 	new_entry = kzalloc(sizeof(struct st_susfs_sus_kstat_hlist), GFP_KERNEL);
+ 	if (!new_entry) {

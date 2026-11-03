@@ -1,0 +1,12 @@
+# 大件不进仓库
+_ref/
+cache/
+out/
+logs/
+work/
+*.zip
+*.tmp
+
+# 本机状态
+config/tool-state.json
+config/manifest-cache.tsv

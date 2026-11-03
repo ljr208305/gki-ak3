@@ -1,0 +1,1393 @@
+{
+    "generated":  "2026-11-03",
+    "source":  "Numbersf/Action-Build FILE.md",
+    "count":  198,
+    "devices":  [
+                    {
+                        "id":  "oneplus_nord_3_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Nord 3"
+                    },
+                    {
+                        "id":  "oneplus_10_pro_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus 10 Pro"
+                    },
+                    {
+                        "id":  "oneplus_pad_lite_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Pad Lite"
+                    },
+                    {
+                        "id":  "oneplus_11r_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus 11R"
+                    },
+                    {
+                        "id":  "oneplus_ace2_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Ace 2"
+                    },
+                    {
+                        "id":  "oneplus_pad_mt6983_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Pad MT6983"
+                    },
+                    {
+                        "id":  "oneplus_ace_2v_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Ace 2V"
+                    },
+                    {
+                        "id":  "oneplus_11_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus 11"
+                    },
+                    {
+                        "id":  "oneplus_12r_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus 12R"
+                    },
+                    {
+                        "id":  "oneplus_ace2_pro_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Ace 2 Pro"
+                    },
+                    {
+                        "id":  "oneplus_ace3_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Ace 3"
+                    },
+                    {
+                        "id":  "oneplus_open_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Open"
+                    },
+                    {
+                        "id":  "oneplus_nord_ce4_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Nord CE4"
+                    },
+                    {
+                        "id":  "oneplus_n6_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus N6"
+                    },
+                    {
+                        "id":  "oneplus_n6x_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus N6x"
+                    },
+                    {
+                        "id":  "oneplus_12_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus 12"
+                    },
+                    {
+                        "id":  "oneplus_pad_go_2_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Pad Go 2"
+                    },
+                    {
+                        "id":  "oneplus_turbo_6x_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Turbo 6X"
+                    },
+                    {
+                        "id":  "oneplus_nord_ce4_lite_5g_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Nord CE4 Lite 5G"
+                    },
+                    {
+                        "id":  "oneplus_nord_ce6",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus Nord CE6"
+                    },
+                    {
+                        "id":  "oneplus_nord_ce6_lite_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Nord CE6 Lite"
+                    },
+                    {
+                        "id":  "oneplus_turbo_6v",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus Turbo 6V"
+                    },
+                    {
+                        "id":  "oneplus_nord_4_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Nord 4"
+                    },
+                    {
+                        "id":  "oneplus_ace_3v_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Ace 3V"
+                    },
+                    {
+                        "id":  "oneplus_pad_mt6897_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Pad MT6897"
+                    },
+                    {
+                        "id":  "oneplus_13r_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus 13R"
+                    },
+                    {
+                        "id":  "oneplus_ace3_pro_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Ace 3 Pro"
+                    },
+                    {
+                        "id":  "oneplus_ace5_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Ace 5"
+                    },
+                    {
+                        "id":  "oneplus_pad_pro_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Pad Pro"
+                    },
+                    {
+                        "id":  "oneplus_pad2_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Pad 2"
+                    },
+                    {
+                        "id":  "oneplus_nord_ce5_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Nord CE5"
+                    },
+                    {
+                        "id":  "oneplus_nord_5_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Nord 5"
+                    },
+                    {
+                        "id":  "oneplus_ace5_pro_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Ace 5 Pro"
+                    },
+                    {
+                        "id":  "oneplus_13_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus 13"
+                    },
+                    {
+                        "id":  "oneplus_13t_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus 13T"
+                    },
+                    {
+                        "id":  "oneplus_13s_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus 13S"
+                    },
+                    {
+                        "id":  "oneplus_pad_2_pro_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Pad 2 Pro"
+                    },
+                    {
+                        "id":  "oneplus_pad_3_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Pad 3"
+                    },
+                    {
+                        "id":  "oneplus_ace5_race_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Ace 5 Race"
+                    },
+                    {
+                        "id":  "oneplus_ace5_ultra_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Ace 5 Ultra"
+                    },
+                    {
+                        "id":  "oneplus_pad2_mt6991_b",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OnePlus Pad 2 MT6991"
+                    },
+                    {
+                        "id":  "oneplus_ace_6",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus Ace 6"
+                    },
+                    {
+                        "id":  "oneplus_turbo_6",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus Turbo 6"
+                    },
+                    {
+                        "id":  "oneplus_nord_6",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus Nord 6"
+                    },
+                    {
+                        "id":  "oneplus_ace_6t",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus Ace 6T"
+                    },
+                    {
+                        "id":  "oneplus_15r",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus 15R"
+                    },
+                    {
+                        "id":  "oneplus_15",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus 15"
+                    },
+                    {
+                        "id":  "oneplus_15t",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus 15T"
+                    },
+                    {
+                        "id":  "oneplus_pad_3_pro",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus Pad 3 Pro"
+                    },
+                    {
+                        "id":  "oneplus_pad_4",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus Pad 4"
+                    },
+                    {
+                        "id":  "oneplus_ace6_ultra",
+                        "brand":  "oneplus",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OnePlus Ace 6 Ultra"
+                    },
+                    {
+                        "id":  "realme_neo_8",
+                        "brand":  "realme",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "RealME Neo 8"
+                    },
+                    {
+                        "id":  "realme_neo6_se_b",
+                        "brand":  "realme",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "RealME Neo6 SE"
+                    },
+                    {
+                        "id":  "realme_gt_neo6_b",
+                        "brand":  "realme",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "RealME GT Neo6"
+                    },
+                    {
+                        "id":  "realme_neo7_b",
+                        "brand":  "realme",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "RealME Neo7"
+                    },
+                    {
+                        "id":  "realme_gt5_b",
+                        "brand":  "realme",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "RealME GT5"
+                    },
+                    {
+                        "id":  "realme_gt5pro_b",
+                        "brand":  "realme",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "RealME GT5pro"
+                    },
+                    {
+                        "id":  "realme_gt6_b",
+                        "brand":  "realme",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "RealME GT6"
+                    },
+                    {
+                        "id":  "realme_gt7_b",
+                        "brand":  "realme",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "RealME GT7"
+                    },
+                    {
+                        "id":  "realme_gt7_pro_b",
+                        "brand":  "realme",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "RealME GT7 Pro"
+                    },
+                    {
+                        "id":  "oppo_find_x9",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "",
+                        "label":  "OPPO Find X9"
+                    },
+                    {
+                        "id":  "oppo_find_n2_flip_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find N2 Flip"
+                    },
+                    {
+                        "id":  "oppo_find_n3_flip_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find N3 Flip"
+                    },
+                    {
+                        "id":  "oppo_reno12_pro_mt6985_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Reno 12 Pro MT6985"
+                    },
+                    {
+                        "id":  "oppo_k12_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO K12"
+                    },
+                    {
+                        "id":  "oppo_k13_turbo_pro_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO K13 Turbo Pro"
+                    },
+                    {
+                        "id":  "oppo_reno13f_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Reno 13f"
+                    },
+                    {
+                        "id":  "oppo_find_x5_pro_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find X5 Pro"
+                    },
+                    {
+                        "id":  "oppo_find_n2_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find N2"
+                    },
+                    {
+                        "id":  "oppo_reno10_pro_plus_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Reno 10 Pro Plus"
+                    },
+                    {
+                        "id":  "oppo_find_n3_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find N3"
+                    },
+                    {
+                        "id":  "oppo_find_x6_pro_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find X6 Pro"
+                    },
+                    {
+                        "id":  "oppo_find_x7_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find X7"
+                    },
+                    {
+                        "id":  "oppo_find_x7_ultra_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find X7 Ultra"
+                    },
+                    {
+                        "id":  "oppo_pad_3_pro_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Pad 3 Pro"
+                    },
+                    {
+                        "id":  "oppo_reno11_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Reno 11"
+                    },
+                    {
+                        "id":  "oppo_reno12_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Reno 12"
+                    },
+                    {
+                        "id":  "oppo_reno13_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Reno 13"
+                    },
+                    {
+                        "id":  "oppo_reno14_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Reno 14"
+                    },
+                    {
+                        "id":  "oppo_reno14_pro_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Reno 14 Pro"
+                    },
+                    {
+                        "id":  "oppo_find_n5_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find N5"
+                    },
+                    {
+                        "id":  "oppo_find_x8_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find X8"
+                    },
+                    {
+                        "id":  "oppo_find_x8s_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find X8s"
+                    },
+                    {
+                        "id":  "oppo_find_x8s_plus_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find X8s Plus"
+                    },
+                    {
+                        "id":  "oppo_find_x8_ultra_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Find X8 Ultra"
+                    },
+                    {
+                        "id":  "oppo_pad_4_pro_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Pad 4 Pro"
+                    },
+                    {
+                        "id":  "oppo_reno_15_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Reno 15"
+                    },
+                    {
+                        "id":  "oppo_pad_3_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Pad 3"
+                    },
+                    {
+                        "id":  "oppo_pad_air5_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Pad Air5"
+                    },
+                    {
+                        "id":  "oppo_pad_5_mt6878_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Pad 5 MT6878"
+                    },
+                    {
+                        "id":  "oppo_pad_5_mt6991_b",
+                        "brand":  "oppo",
+                        "android":  "16",
+                        "suffix":  "b",
+                        "label":  "OPPO Pad 5 MT6991"
+                    },
+                    {
+                        "id":  "oneplus_nord_n30_se_5g_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Nord N30 SE 5G"
+                    },
+                    {
+                        "id":  "oneplus_10r_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus 10R"
+                    },
+                    {
+                        "id":  "oneplus_nord_3_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Nord 3"
+                    },
+                    {
+                        "id":  "oneplus_ace_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Ace"
+                    },
+                    {
+                        "id":  "oneplus_ace_race_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Ace Race"
+                    },
+                    {
+                        "id":  "oneplus_pad_lite_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Pad Lite"
+                    },
+                    {
+                        "id":  "oneplus_pad_mt6983_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Pad MT6983"
+                    },
+                    {
+                        "id":  "oneplus_pad_mt6897_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Pad MT6897"
+                    },
+                    {
+                        "id":  "oneplus_ace_2v_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Ace 2V"
+                    },
+                    {
+                        "id":  "oneplus_nord_ce4_lite_5g_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Nord CE4 Lite 5G"
+                    },
+                    {
+                        "id":  "oneplus_nord_ce4_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Nord CE4"
+                    },
+                    {
+                        "id":  "oneplus_nord_4_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Nord 4"
+                    },
+                    {
+                        "id":  "oneplus_ace_3v_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Ace 3V"
+                    },
+                    {
+                        "id":  "oneplus_10_pro_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus 10 Pro"
+                    },
+                    {
+                        "id":  "oneplus_10t_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus 10T"
+                    },
+                    {
+                        "id":  "oneplus_11r_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus 11R"
+                    },
+                    {
+                        "id":  "oneplus_ace2_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Ace 2"
+                    },
+                    {
+                        "id":  "oneplus_ace_pro_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Ace Pro"
+                    },
+                    {
+                        "id":  "oneplus_11_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus 11"
+                    },
+                    {
+                        "id":  "oneplus_12r_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus 12R"
+                    },
+                    {
+                        "id":  "oneplus_ace2_pro_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Ace 2 Pro"
+                    },
+                    {
+                        "id":  "oneplus_ace3_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Ace 3"
+                    },
+                    {
+                        "id":  "oneplus_open_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Open"
+                    },
+                    {
+                        "id":  "oneplus_12_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus 12"
+                    },
+                    {
+                        "id":  "oneplus_13r",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus 13R"
+                    },
+                    {
+                        "id":  "oneplus_ace3_pro_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Ace 3 Pro"
+                    },
+                    {
+                        "id":  "oneplus_ace5",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus Ace 5"
+                    },
+                    {
+                        "id":  "oneplus_pad_pro_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Pad Pro"
+                    },
+                    {
+                        "id":  "oneplus_pad2_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Pad 2"
+                    },
+                    {
+                        "id":  "oneplus_nord_5",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus Nord 5"
+                    },
+                    {
+                        "id":  "oneplus_nord_ce5_v",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OnePlus Nord CE5"
+                    },
+                    {
+                        "id":  "oneplus_ace5_pro",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus Ace 5 Pro"
+                    },
+                    {
+                        "id":  "oneplus_13",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus 13"
+                    },
+                    {
+                        "id":  "oneplus_13_global",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus 13 Global"
+                    },
+                    {
+                        "id":  "oneplus_13t",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus 13T"
+                    },
+                    {
+                        "id":  "oneplus_13s",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus 13S"
+                    },
+                    {
+                        "id":  "oneplus_pad_2_pro",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus Pad 2 Pro"
+                    },
+                    {
+                        "id":  "oneplus_pad_3",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus Pad 3"
+                    },
+                    {
+                        "id":  "oneplus_ace5_race",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus Ace 5 Race"
+                    },
+                    {
+                        "id":  "oneplus_ace5_ultra",
+                        "brand":  "oneplus",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OnePlus Ace 5 Ultra"
+                    },
+                    {
+                        "id":  "realme_gt5_v",
+                        "brand":  "realme",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "RealME GT5"
+                    },
+                    {
+                        "id":  "realme_gt_neo5se_v",
+                        "brand":  "realme",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "RealME GT Neo5se"
+                    },
+                    {
+                        "id":  "realme_gt5pro_v",
+                        "brand":  "realme",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "RealME GT5pro"
+                    },
+                    {
+                        "id":  "realme_gt6_v",
+                        "brand":  "realme",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "RealME GT6"
+                    },
+                    {
+                        "id":  "realme_gt_neo6_v",
+                        "brand":  "realme",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "RealME GT Neo6"
+                    },
+                    {
+                        "id":  "realme_neo7_v",
+                        "brand":  "realme",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "RealME Neo7"
+                    },
+                    {
+                        "id":  "realme_neo7_se_v",
+                        "brand":  "realme",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "RealME Neo7 SE"
+                    },
+                    {
+                        "id":  "realme_gt7_pro",
+                        "brand":  "realme",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "RealME GT7 Pro"
+                    },
+                    {
+                        "id":  "oppo_find_n3_flip_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Find N3 Flip"
+                    },
+                    {
+                        "id":  "oppo_k13_turbo_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO K13 Turbo"
+                    },
+                    {
+                        "id":  "oppo_k13_turbo_pro_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO K13 Turbo Pro"
+                    },
+                    {
+                        "id":  "oppo_reno12_pro_mt6985_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 12 Pro MT6985"
+                    },
+                    {
+                        "id":  "oppo_find_n2_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Find N2"
+                    },
+                    {
+                        "id":  "oppo_reno13f_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 13f"
+                    },
+                    {
+                        "id":  "oppo_pad_se_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Pad SE"
+                    },
+                    {
+                        "id":  "oppo_reno8_pro_plus_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 8 Pro Plus"
+                    },
+                    {
+                        "id":  "oppo_reno9_pro_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 9 Pro"
+                    },
+                    {
+                        "id":  "oppo_reno9_pro_plus_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 9 Pro Plus"
+                    },
+                    {
+                        "id":  "oppo_reno10_pro_plus_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 10 Pro Plus"
+                    },
+                    {
+                        "id":  "oppo_reno11_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 11"
+                    },
+                    {
+                        "id":  "oppo_reno11_pro_5g_mt6896_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 11 Pro 5G MT6896"
+                    },
+                    {
+                        "id":  "oppo_reno11_pro_5g_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 11 Pro 5G"
+                    },
+                    {
+                        "id":  "oppo_reno12_mt6896_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 12 MT6896"
+                    },
+                    {
+                        "id":  "oppo_reno12_5g_mt6878_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 12 5G MT6878"
+                    },
+                    {
+                        "id":  "oppo_reno12_pro_5g_mt6878_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 12 Pro 5G MT6878"
+                    },
+                    {
+                        "id":  "oppo_a5_pro_5g_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO A5 Pro 5G"
+                    },
+                    {
+                        "id":  "oppo_f29_pro_5g_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO F29 Pro 5G"
+                    },
+                    {
+                        "id":  "oppo_reno13_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 13"
+                    },
+                    {
+                        "id":  "oppo_reno14_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 14"
+                    },
+                    {
+                        "id":  "oppo_reno14_pro_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Reno 14 Pro"
+                    },
+                    {
+                        "id":  "oppo_pad_2_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Pad 2"
+                    },
+                    {
+                        "id":  "oppo_pad_3_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Pad 3"
+                    },
+                    {
+                        "id":  "oppo_find_n3_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Find N3"
+                    },
+                    {
+                        "id":  "oppo_find_x5_pro_mt6983_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Find X5 Pro MT6983"
+                    },
+                    {
+                        "id":  "oppo_find_x6_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Find X6"
+                    },
+                    {
+                        "id":  "oppo_find_x6_pro_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Find X6 Pro"
+                    },
+                    {
+                        "id":  "oppo_find_x7_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Find X7"
+                    },
+                    {
+                        "id":  "oppo_find_x7_ultra_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Find X7 Ultra"
+                    },
+                    {
+                        "id":  "oppo_pad_3_pro_v",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "v",
+                        "label":  "OPPO Pad 3 Pro"
+                    },
+                    {
+                        "id":  "oppo_find_n5",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OPPO Find N5"
+                    },
+                    {
+                        "id":  "oppo_find_x8",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OPPO Find X8"
+                    },
+                    {
+                        "id":  "oppo_find_x8_pro",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OPPO Find X8 Pro"
+                    },
+                    {
+                        "id":  "oppo_find_x8s",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OPPO Find X8s"
+                    },
+                    {
+                        "id":  "oppo_find_x8s_plus",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OPPO Find X8s Plus"
+                    },
+                    {
+                        "id":  "oppo_find_x8_ultra",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OPPO Find X8 Ultra"
+                    },
+                    {
+                        "id":  "oppo_pad_4_pro",
+                        "brand":  "oppo",
+                        "android":  "15",
+                        "suffix":  "",
+                        "label":  "OPPO Pad 4 Pro"
+                    },
+                    {
+                        "id":  "oneplus_ace3_pro",
+                        "brand":  "oneplus",
+                        "android":  "14",
+                        "suffix":  "",
+                        "label":  "OnePlus Ace 3 Pro"
+                    },
+                    {
+                        "id":  "oneplus_pad_pro",
+                        "brand":  "oneplus",
+                        "android":  "14",
+                        "suffix":  "",
+                        "label":  "OnePlus Pad Pro"
+                    },
+                    {
+                        "id":  "oneplus_12_u",
+                        "brand":  "oneplus",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "OnePlus 12"
+                    },
+                    {
+                        "id":  "oneplus_10_pro_u",
+                        "brand":  "oneplus",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "OnePlus 10 Pro"
+                    },
+                    {
+                        "id":  "oneplus_11r_u",
+                        "brand":  "oneplus",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "OnePlus 11R"
+                    },
+                    {
+                        "id":  "oneplus_11_u",
+                        "brand":  "oneplus",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "OnePlus 11"
+                    },
+                    {
+                        "id":  "oneplus_ace_u",
+                        "brand":  "oneplus",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "OnePlus Ace"
+                    },
+                    {
+                        "id":  "oneplus_ace_race_u",
+                        "brand":  "oneplus",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "OnePlus Ace Race"
+                    },
+                    {
+                        "id":  "oneplus_10r_u",
+                        "brand":  "oneplus",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "OnePlus 10R"
+                    },
+                    {
+                        "id":  "realme_gt_neo3_u",
+                        "brand":  "realme",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "RealME GT Neo3"
+                    },
+                    {
+                        "id":  "oppo_find_n3_flip_u",
+                        "brand":  "oppo",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "OPPO Find N3 Flip"
+                    },
+                    {
+                        "id":  "oppo_find_x6_u",
+                        "brand":  "oppo",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "OPPO Find X6"
+                    },
+                    {
+                        "id":  "oppo_reno12_pro_mt6985_u",
+                        "brand":  "oppo",
+                        "android":  "14",
+                        "suffix":  "u",
+                        "label":  "OPPO Reno 12 Pro MT6985"
+                    },
+                    {
+                        "id":  "oneplus_11_t",
+                        "brand":  "oneplus",
+                        "android":  "13",
+                        "suffix":  "t",
+                        "label":  "OnePlus 11"
+                    },
+                    {
+                        "id":  "oneplus_10r_t",
+                        "brand":  "oneplus",
+                        "android":  "13",
+                        "suffix":  "t",
+                        "label":  "OnePlus 10R"
+                    },
+                    {
+                        "id":  "oneplus_ace_t",
+                        "brand":  "oneplus",
+                        "android":  "13",
+                        "suffix":  "t",
+                        "label":  "OnePlus Ace"
+                    },
+                    {
+                        "id":  "realme_gt_neo3_t",
+                        "brand":  "realme",
+                        "android":  "13",
+                        "suffix":  "t",
+                        "label":  "RealME GT Neo3"
+                    },
+                    {
+                        "id":  "oppo_find_n3_flip",
+                        "brand":  "oppo",
+                        "android":  "13",
+                        "suffix":  "",
+                        "label":  "OPPO Find N3 Flip"
+                    },
+                    {
+                        "id":  "oppo_find_x6",
+                        "brand":  "oppo",
+                        "android":  "13",
+                        "suffix":  "",
+                        "label":  "OPPO Find X6"
+                    },
+                    {
+                        "id":  "oneplus_10_pro_s",
+                        "brand":  "oneplus",
+                        "android":  "12",
+                        "suffix":  "s",
+                        "label":  "OnePlus 10 Pro"
+                    },
+                    {
+                        "id":  "oneplus_10r_s",
+                        "brand":  "oneplus",
+                        "android":  "12",
+                        "suffix":  "s",
+                        "label":  "OnePlus 10R"
+                    }
+                ]
+}

@@ -1,0 +1,100 @@
+name: Build AK3
+
+on:
+  workflow_dispatch:
+    inputs:
+      devices:
+        description: '机型 id（逗号分隔，如 oneplus_ace6,oneplus_13_b）'
+        required: true
+        default: 'oneplus_ace_6'
+      suffix:
+        description: '内核后缀'
+        required: true
+        default: '念想'
+      kpm:
+        description: 'KPM 模式'
+        type: choice
+        options: [N/A, KPM, KPN]
+        default: N/A
+      profile:
+        description: '配置档'
+        type: choice
+        options: [core, full]
+        default: core
+      jobs:
+        description: '并发（留空自动按内存算）'
+        required: false
+        default: ''
+      keep_source:
+        description: '编完保留源码（编同芯片第二台快很多）'
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 350
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 腾磁盘
+        run: sudo bash scripts/ci_free_space.sh
+
+      - name: 装依赖
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            python3 git curl repo libelf-dev build-essential flex bison libssl-dev \
+            libncurses-dev lz4 zlib1g-dev libxml2-utils rsync unzip gawk dos2unix \
+            kmod libdw-dev elfutils dwarves jq ccache zip
+          command -v repo && repo --version | head -2 || true
+          ccache --version | head -1
+
+      - name: 构建
+        env:
+          SUFFIX: ${{ inputs.suffix }}
+          KPM: ${{ inputs.kpm }}
+          PROFILE: ${{ inputs.profile }}
+          JOBS_IN: ${{ inputs.jobs }}
+          KEEP: ${{ inputs.keep_source }}
+        run: |
+          set -u
+          IFS=',' read -ra DEVS <<< "${{ inputs.devices }}"
+          FAILED=""
+          for d in "${DEVS[@]}"; do
+            d="$(echo "$d" | tr -d ' \r\n')"
+            [ -z "$d" ] && continue
+            echo "=========================================="
+            echo "  构建 $d"
+            echo "=========================================="
+            EXTRA=()
+            if [ "$KEEP" = "true" ]; then EXTRA+=(--save-source); fi
+            if [ -n "$JOBS_IN" ]; then EXTRA+=(--jobs "$JOBS_IN"); fi
+            if ! bash scripts/build_one.sh --file "$d" --suffix "$SUFFIX" --kpm "$KPM" --profile "$PROFILE" "${EXTRA[@]}"; then
+              FAILED="$FAILED $d"
+            fi
+          done
+          if [ -n "$FAILED" ]; then
+            echo "::error::失败的机型:$FAILED"
+            exit 1
+          fi
+
+      - name: 上传 AK3
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: AK3-${{ github.run_number }}
+          path: out/*.zip
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: 上传日志
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-${{ github.run_number }}
+          path: logs/*.log
+          if-no-files-found: ignore
+          retention-days: 7

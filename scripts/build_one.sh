@@ -339,7 +339,7 @@ else
 fi
 
 # ============================================================================
-step "6/9 接入 SUSFS $SUSFS_VERSION"
+step "6/9 接入 SUSFS"
 LOCAL_SUSFS="$PATCH_DIR/susfs/$KMI"
 SUSFS_PATCH=""
 # 兼容旧的按版本命名的目录
@@ -348,7 +348,7 @@ if [ ! -f "$LOCAL_SUSFS/50_add_susfs_in_gki-$KMI.patch" ] && [ -f "$PATCH_DIR/su
 fi
 if [ -f "$LOCAL_SUSFS/50_add_susfs_in_gki-$KMI.patch" ]; then
   SUSFS_PATCH="$LOCAL_SUSFS/50_add_susfs_in_gki-$KMI.patch"
-  log "用本地 $SUSFS_VERSION 补丁: $SUSFS_PATCH"
+  log "用本地补丁: $SUSFS_PATCH"
   if ! dry; then
     cp "$SUSFS_PATCH" "$KP/common/"
     cp "$LOCAL_SUSFS"/fs/* "$KP/common/fs/"
@@ -421,10 +421,19 @@ if ! dry; then
   set_config "CONFIG_KSU_MULTI_MANAGER_SUPPORT=y"
   set_config "CONFIG_KSU_FULL_NAME_FORMAT=\"%TAG_NAME%-${SUFFIX}.\""
   set_config "CONFIG_KSU_SUSFS=y"
-  for k in SUS_PATH SUS_MOUNT SUS_KSTAT SUS_MAP SPOOF_UNAME ENABLE_LOG \
-           HIDE_KSU_SUSFS_SYMBOLS SPOOF_CMDLINE_OR_BOOTCONFIG OPEN_REDIRECT; do
-    set_config "CONFIG_KSU_SUSFS_${k}=y"
-  done
+  # 按补丁里真正实现的开关来开，避免开了补丁没实现的项导致链接报未定义符号
+  if [ -f "$SUSFS_PATCH" ]; then
+    SUSFS_OPTS="$(grep -o 'CONFIG_KSU_SUSFS_[A-Z_0-9]*' "$SUSFS_PATCH" | sort -u)"
+    for opt in $SUSFS_OPTS; do
+      set_config "${opt}=y"
+    done
+    log "按补丁开 SUSFS 开关: $(echo "$SUSFS_OPTS" | tr '\n' ' ')"
+  else
+    for k in SUS_PATH SUS_MOUNT SUS_KSTAT SPOOF_UNAME ENABLE_LOG \
+             HIDE_KSU_SUSFS_SYMBOLS SPOOF_CMDLINE_OR_BOOTCONFIG OPEN_REDIRECT; do
+      set_config "CONFIG_KSU_SUSFS_${k}=y"
+    done
+  fi
   case "$KPM_MODE" in
     KPM) set_config "CONFIG_KPM=y" ;;
     KPN) set_config "CONFIG_KPM=n" ;;

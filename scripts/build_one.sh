@@ -340,8 +340,12 @@ fi
 
 # ============================================================================
 step "6/9 接入 SUSFS $SUSFS_VERSION"
-LOCAL_SUSFS="$PATCH_DIR/susfs-v$SUSFS_VERSION/kernel_patches"
+LOCAL_SUSFS="$PATCH_DIR/susfs-v$SUSFS_VERSION/$KMI"
 SUSFS_PATCH=""
+# 兼容老的扁平结构
+if [ ! -f "$LOCAL_SUSFS/50_add_susfs_in_gki-$KMI.patch" ] && [ -f "$PATCH_DIR/susfs-v$SUSFS_VERSION/kernel_patches/50_add_susfs_in_gki-$KMI.patch" ]; then
+  LOCAL_SUSFS="$PATCH_DIR/susfs-v$SUSFS_VERSION/kernel_patches"
+fi
 if [ -f "$LOCAL_SUSFS/50_add_susfs_in_gki-$KMI.patch" ]; then
   SUSFS_PATCH="$LOCAL_SUSFS/50_add_susfs_in_gki-$KMI.patch"
   log "用本地 $SUSFS_VERSION 补丁: $SUSFS_PATCH"
@@ -370,13 +374,29 @@ fi
 if ! dry; then
   cd "$KP/common"
   PB_NAME="$(basename "$SUSFS_PATCH")"
+  APPLIED=0
   if patch -p1 --forward --dry-run < "$PB_NAME" >/dev/null 2>&1; then
-    patch -p1 --forward < "$PB_NAME"
-  else
-    log "直接 patch 有冲突，改用 git apply --3way"
-    git apply --3way --whitespace=nowarn "$PB_NAME" || die "SUSFS 补丁打不进去，看 $LOGFILE"
+    patch -p1 --forward < "$PB_NAME" && APPLIED=1
   fi
-  ok "SUSFS 补丁已应用"
+  if [ "$APPLIED" = "0" ]; then
+    log "严格匹配失败，用 fuzz=3 模糊匹配（厂商源码和 GKI 有偏移）"
+    if patch -p1 --forward --fuzz=3 --dry-run < "$PB_NAME" >/dev/null 2>&1; then
+      patch -p1 --forward --fuzz=3 < "$PB_NAME" && APPLIED=1
+    fi
+  fi
+  if [ "$APPLIED" = "0" ]; then
+    log "fuzz 也不行，试 git apply --3way"
+    git apply --3way --whitespace=nowarn "$PB_NAME" && APPLIED=1
+  fi
+  REJS="$(find . -name '*.rej' -newermt '-10 minutes' 2>/dev/null | head -10)"
+  if [ -n "$REJS" ]; then
+    warn "有打不进去的补丁块："
+    printf '%s\n' "$REJS" | while read -r r; do warn "  $r"; done
+  fi
+  if [ "$APPLIED" = "0" ]; then
+    die "SUSFS 补丁打不进去，看 $LOGFILE 和上面的 .rej"
+  fi
+  ok "SUSFS 补丁已应用（有 .rej 的块会被列出）"
 fi
 
 # ============================================================================

@@ -340,11 +340,11 @@ fi
 
 # ============================================================================
 step "6/9 接入 SUSFS $SUSFS_VERSION"
-LOCAL_SUSFS="$PATCH_DIR/susfs-v$SUSFS_VERSION/$KMI"
+LOCAL_SUSFS="$PATCH_DIR/susfs/$KMI"
 SUSFS_PATCH=""
-# 兼容老的扁平结构
-if [ ! -f "$LOCAL_SUSFS/50_add_susfs_in_gki-$KMI.patch" ] && [ -f "$PATCH_DIR/susfs-v$SUSFS_VERSION/kernel_patches/50_add_susfs_in_gki-$KMI.patch" ]; then
-  LOCAL_SUSFS="$PATCH_DIR/susfs-v$SUSFS_VERSION/kernel_patches"
+# 兼容旧的按版本命名的目录
+if [ ! -f "$LOCAL_SUSFS/50_add_susfs_in_gki-$KMI.patch" ] && [ -f "$PATCH_DIR/susfs-v$SUSFS_VERSION/$KMI/50_add_susfs_in_gki-$KMI.patch" ]; then
+  LOCAL_SUSFS="$PATCH_DIR/susfs-v$SUSFS_VERSION/$KMI"
 fi
 if [ -f "$LOCAL_SUSFS/50_add_susfs_in_gki-$KMI.patch" ]; then
   SUSFS_PATCH="$LOCAL_SUSFS/50_add_susfs_in_gki-$KMI.patch"

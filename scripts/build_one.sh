@@ -375,11 +375,14 @@ if ! dry; then
   cd "$KP/common"
   PB_NAME="$(basename "$SUSFS_PATCH")"
   APPLIED=0
-  # depth=1 克隆没有 blob 历史，3-way merge 用不了；先补全 common 的 git 历史
-  if [ -d .git ] && [ -f .git/shallow ]; then
-    log "补全 common 的 git 历史（3-way merge 需要历史 blob）"
-    git fetch --unshallow 2>/dev/null || true
-    [ -f .git/shallow ] && git fetch --unshallow --filter=blob:none 2>/dev/null || true
+  # 6.1 的补丁基线(6.1.176)和厂商源码(6.1.118)有偏移：先修 hunk 行号 + 直接插 include
+  if [ "$KMI" = "android14-6.1" ] && [ -f "$GKI_ROOT/scripts/patch_prep.py" ]; then
+    log "预处理补丁（删 include 区 hunk、直接插入 include）"
+    python3 "$GKI_ROOT/scripts/patch_prep.py" "$KP/common/$PB_NAME" "$KP/common" 2>&1 | tail -8 || true
+    if [ -f "$KP/common/$PB_NAME.new" ]; then
+      mv "$KP/common/$PB_NAME.new" "$KP/common/$PB_NAME"
+      log "已换成预处理后的补丁"
+    fi
   fi
   # 优先 3-way merge，它能自动处理上下文行号偏移
   APPLY_LOG="/tmp/susfs-apply.log"

@@ -80,7 +80,7 @@ diff --git a/fs/Makefile b/fs/Makefile
 index 102e4cd2b..a1929dbc8 100644
 --- a/fs/Makefile
 +++ b/fs/Makefile
-@@ -17,6 +17,8 @@ obj-y :=	open.o read_write.o file_table.o super.o \
+@@ -19,6 +19,8 @@ obj-y :=	open.o read_write.o file_table.o super.o \
  		fs_types.o fs_context.o fs_parser.o fsopen.o init.o \
  		kernel_read_file.o remap_range.o
  
@@ -103,7 +103,7 @@ index 6999d609d..d2052e43c 100644
  
  #ifndef __GENKSYMS__
  #include <linux/dma-buf.h>
-@@ -1904,6 +1907,23 @@ static int bprm_execve(struct linux_binprm *bprm,
+@@ -1879,6 +1879,23 @@ static int bprm_execve(struct linux_binprm *bprm,
  	return retval;
  }
  
@@ -127,7 +127,7 @@ index 6999d609d..d2052e43c 100644
  static int do_execveat_common(int fd, struct filename *filename,
  			      struct user_arg_ptr argv,
  			      struct user_arg_ptr envp,
-@@ -1911,10 +1931,42 @@ static int do_execveat_common(int fd, struct filename *filename,
+@@ -1886,10 +1886,42 @@ static int do_execveat_common(int fd, struct filename *filename,
  {
  	struct linux_binprm *bprm;
  	int retval;
@@ -170,7 +170,7 @@ index 6999d609d..d2052e43c 100644
  	/*
  	 * We move the actual failure in case of RLIMIT_NPROC excess from
  	 * set*uid() to execve() because too many poorly written programs
-@@ -1981,6 +2033,22 @@ static int do_execveat_common(int fd, struct filename *filename,
+@@ -1956,6 +1956,22 @@ static int do_execveat_common(int fd, struct filename *filename,
  	}
  
  	retval = bprm_execve(bprm, fd, filename, flags);
@@ -661,7 +661,7 @@ index 4d910be7c..572d3c20f 100644
  /* Maximum number of mounts in a mount namespace */
  static unsigned int sysctl_mount_max __read_mostly = 100000;
  
-@@ -145,6 +155,10 @@ static int mnt_alloc_id(struct mount *mnt)
+@@ -135,6 +135,10 @@ static int mnt_alloc_id(struct mount *mnt)
  
  static void mnt_free_id(struct mount *mnt)
  {
@@ -672,7 +672,7 @@ index 4d910be7c..572d3c20f 100644
  	ida_free(&mnt_id_ida, mnt->mnt_id);
  }
  
-@@ -153,7 +167,25 @@ static void mnt_free_id(struct mount *mnt)
+@@ -143,7 +143,25 @@ static void mnt_free_id(struct mount *mnt)
   */
  static int mnt_alloc_group_id(struct mount *mnt)
  {
@@ -698,7 +698,7 @@ index 4d910be7c..572d3c20f 100644
  
  	if (res < 0)
  		return res;
-@@ -203,6 +235,119 @@ int mnt_get_count(struct mount *mnt)
+@@ -193,6 +193,119 @@ int mnt_get_count(struct mount *mnt)
  #endif
  }
  
@@ -818,7 +818,7 @@ index 4d910be7c..572d3c20f 100644
  static struct mount *alloc_vfsmnt(const char *name)
  {
  	struct mount *mnt = kmem_cache_zalloc(mnt_cache, GFP_KERNEL);
-@@ -676,6 +821,20 @@ struct mount *__lookup_mnt(struct vfsmount *mnt, struct dentry *dentry)
+@@ -670,6 +670,20 @@ struct mount *__lookup_mnt(struct vfsmount *mnt, struct dentry *dentry)
  	struct hlist_head *head = m_hash(mnt, dentry);
  	struct mount *p;
  
@@ -839,7 +839,7 @@ index 4d910be7c..572d3c20f 100644
  	hlist_for_each_entry_rcu(p, head, mnt_hash)
  		if (&p->mnt_parent->mnt == mnt && p->mnt_mountpoint == dentry)
  			return p;
-@@ -1020,7 +1179,21 @@ struct vfsmount *vfs_create_mount(struct fs_context *fc)
+@@ -1014,7 +1014,21 @@ struct vfsmount *vfs_create_mount(struct fs_context *fc)
  	if (!fc->root)
  		return ERR_PTR(-EINVAL);
  
@@ -861,7 +861,7 @@ index 4d910be7c..572d3c20f 100644
  	if (!mnt)
  		return ERR_PTR(-ENOMEM);
  
-@@ -1106,8 +1279,42 @@ static struct mount *clone_mnt(struct mount *old, struct dentry *root,
+@@ -1100,8 +1100,42 @@ static struct mount *clone_mnt(struct mount *old, struct dentry *root,
  	struct super_block *sb = old->mnt.mnt_sb;
  	struct mount *mnt;
  	int err;
@@ -904,7 +904,7 @@ index 4d910be7c..572d3c20f 100644
  	if (!mnt)
  		return ERR_PTR(-ENOMEM);
  
-@@ -1125,6 +1332,11 @@ static struct mount *clone_mnt(struct mount *old, struct dentry *root,
+@@ -1119,6 +1119,11 @@ static struct mount *clone_mnt(struct mount *old, struct dentry *root,
  	mnt->mnt.mnt_flags = old->mnt.mnt_flags;
  	mnt->mnt.mnt_flags &= ~(MNT_WRITE_HOLD|MNT_MARKED|MNT_INTERNAL);
  
@@ -916,7 +916,7 @@ index 4d910be7c..572d3c20f 100644
  	atomic_inc(&sb->s_active);
  	mnt->mnt.mnt_userns = mnt_user_ns(&old->mnt);
  	if (!initial_idmapping(mnt->mnt.mnt_userns))
-@@ -3518,6 +3730,9 @@ struct mnt_namespace *copy_mnt_ns(unsigned long flags, struct mnt_namespace *ns,
+@@ -3493,6 +3493,9 @@ struct mnt_namespace *copy_mnt_ns(unsigned long flags, struct mnt_namespace *ns,
  	copy_flags = CL_COPY_UNBINDABLE | CL_EXPIRE;
  	if (user_ns != ns->user_ns)
  		copy_flags |= CL_SHARED_TO_SLAVE;
@@ -926,7 +926,7 @@ index 4d910be7c..572d3c20f 100644
  	new = copy_tree(old, old->mnt.mnt_root, copy_flags);
  	if (IS_ERR(new)) {
  		namespace_unlock();
-@@ -4765,3 +4980,43 @@ static int __init init_fs_namespace_sysctls(void)
+@@ -4740,3 +4740,43 @@ static int __init init_fs_namespace_sysctls(void)
  fs_initcall(init_fs_namespace_sysctls);
  
  #endif /* CONFIG_SYSCTL */
@@ -1167,7 +1167,7 @@ index 44904de62..cc03392c4 100644
  #include <trace/events/oom.h>
  #include <trace/hooks/sched.h>
  #include "internal.h"
-@@ -1835,6 +1839,10 @@ static const char *proc_pid_get_link(struct dentry *dentry,
+@@ -1833,6 +1833,10 @@ static const char *proc_pid_get_link(struct dentry *dentry,
  	return ERR_PTR(error);
  }
  
@@ -1178,7 +1178,7 @@ index 44904de62..cc03392c4 100644
  static int do_proc_readlink(const struct path *path, char __user *buffer, int buflen)
  {
  	char *tmp = kmalloc(PATH_MAX, GFP_KERNEL);
-@@ -1844,6 +1852,18 @@ static int do_proc_readlink(const struct path *path, char __user *buffer, int bu
+@@ -1842,6 +1842,18 @@ static int do_proc_readlink(const struct path *path, char __user *buffer, int bu
  	if (!tmp)
  		return -ENOMEM;
  
@@ -1197,7 +1197,7 @@ index 44904de62..cc03392c4 100644
  	pathname = d_path(path, tmp, PATH_MAX);
  	len = PTR_ERR(pathname);
  	if (IS_ERR(pathname))
-@@ -2466,6 +2486,10 @@ proc_map_files_readdir(struct file *file, struct dir_context *ctx)
+@@ -2464,6 +2464,10 @@ proc_map_files_readdir(struct file *file, struct dir_context *ctx)
  	for_each_vma(vmi, vma) {
  		if (!vma->vm_file)
  			continue;
@@ -1347,7 +1347,7 @@ index 37f6cefe0..61331eb7c 100644
  
  #include <asm/elf.h>
  #include <asm/tlb.h>
-@@ -274,6 +277,14 @@ static void show_vma_header_prefix(struct seq_file *m,
+@@ -273,6 +273,14 @@ static void show_vma_header_prefix(struct seq_file *m,
  	seq_putc(m, ' ');
  }
  
@@ -1362,7 +1362,7 @@ index 37f6cefe0..61331eb7c 100644
  static void
  show_map_vma(struct seq_file *m, struct vm_area_struct *vma)
  {
-@@ -288,9 +299,36 @@ show_map_vma(struct seq_file *m, struct vm_area_struct *vma)
+@@ -287,9 +287,36 @@ show_map_vma(struct seq_file *m, struct vm_area_struct *vma)
  
  	if (file) {
  		struct inode *inode = file_inode(vma->vm_file);
@@ -1399,7 +1399,7 @@ index 37f6cefe0..61331eb7c 100644
  	}
  
  	start = vma->vm_start;
-@@ -884,6 +922,13 @@ static int show_smap(struct seq_file *m, void *v)
+@@ -917,6 +917,13 @@ static int show_smap(struct seq_file *m, void *v)
  	struct vm_area_struct *vma = v;
  	struct mem_size_stats mss;
  
@@ -1413,7 +1413,7 @@ index 37f6cefe0..61331eb7c 100644
  	memset(&mss, 0, sizeof(mss));
  
  	if (!vma_pages(vma))
-@@ -946,7 +991,14 @@ static int show_smaps_rollup(struct seq_file *m, void *v)
+@@ -1051,7 +1051,14 @@ static int show_smaps_rollup(struct seq_file *m, void *v)
  
  	vma_start = vma->vm_start;
  	do {
@@ -1428,7 +1428,7 @@ index 37f6cefe0..61331eb7c 100644
  		last_vma_end = vma->vm_end;
  
  		/*
-@@ -1009,7 +1061,14 @@ static int show_smaps_rollup(struct seq_file *m, void *v)
+@@ -1114,7 +1114,14 @@ static int show_smaps_rollup(struct seq_file *m, void *v)
  
  			/* Case 4 above */
  			if (vma->vm_end > last_vma_end)
@@ -1443,7 +1443,7 @@ index 37f6cefe0..61331eb7c 100644
  		}
  		/* Case 2 above */
  	} while ((vma = mas_find(&mas, ULONG_MAX)) != NULL);
-@@ -1742,6 +1801,9 @@ static ssize_t pagemap_read(struct file *file, char __user *buf,
+@@ -1847,6 +1847,9 @@ static ssize_t pagemap_read(struct file *file, char __user *buf,
  	while (count && (start_vaddr < end_vaddr)) {
  		int len;
  		unsigned long end;
@@ -1453,7 +1453,7 @@ index 37f6cefe0..61331eb7c 100644
  
  		pm.pos = 0;
  		end = (start_vaddr + PAGEMAP_WALK_SIZE) & PAGEMAP_WALK_MASK;
-@@ -1751,7 +1813,15 @@ static ssize_t pagemap_read(struct file *file, char __user *buf,
+@@ -1856,7 +1856,15 @@ static ssize_t pagemap_read(struct file *file, char __user *buf,
  		ret = mmap_read_lock_killable(mm);
  		if (ret)
  			goto out_free;

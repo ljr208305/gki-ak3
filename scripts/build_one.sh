@@ -375,8 +375,27 @@ if ! dry; then
   cd "$KP/common"
   PB_NAME="$(basename "$SUSFS_PATCH")"
   APPLIED=0
-  if patch -p1 --forward --dry-run < "$PB_NAME" >/dev/null 2>&1; then
-    patch -p1 --forward < "$PB_NAME" && APPLIED=1
+  # depth=1 克隆没有 blob 历史，3-way merge 用不了；先补全 common 的 git 历史
+  if [ -d .git ] && [ -f .git/shallow ]; then
+    log "补全 common 的 git 历史（3-way merge 需要历史 blob）"
+    git fetch --unshallow 2>/dev/null || true
+    [ -f .git/shallow ] && git fetch --unshallow --filter=blob:none 2>/dev/null || true
+  fi
+  # 优先 3-way merge，它能自动处理上下文行号偏移
+  APPLY_LOG="/tmp/susfs-apply.log"
+  if [ -d .git ]; then
+    if git apply --3way --whitespace=nowarn "$PB_NAME" >"$APPLY_LOG" 2>&1; then
+      APPLIED=1
+      log "git apply --3way 成功"
+    else
+      log "3-way 失败，末尾输出："
+      tail -8 "$APPLY_LOG" 2>/dev/null || true
+    fi
+  fi
+  if [ "$APPLIED" = "0" ]; then
+    if patch -p1 --forward --dry-run < "$PB_NAME" >/dev/null 2>&1; then
+      patch -p1 --forward < "$PB_NAME" && APPLIED=1
+    fi
   fi
   if [ "$APPLIED" = "0" ]; then
     log "严格匹配失败，用 fuzz=3 模糊匹配（厂商源码和 GKI 有偏移）"
